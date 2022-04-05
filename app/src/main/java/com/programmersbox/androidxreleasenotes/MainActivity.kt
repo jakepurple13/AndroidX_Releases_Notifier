@@ -50,28 +50,7 @@ fun ReleaseNoteScreen(vm: ReleaseNotesViewModel = viewModel()) {
         topBar = {
             SmallTopAppBar(
                 title = { Text("AndroidX Release Notes") },
-                scrollBehavior = scrollBehavior,
-                /*actions = {
-
-                    val context = LocalContext.current
-
-                    IconButton(
-                        onClick = {
-                            WorkManager.getInstance(context)
-                                .enqueue(
-                                    OneTimeWorkRequestBuilder<AndroidXChecker>()
-                                        .setConstraints(
-                                            Constraints.Builder()
-                                                .setRequiredNetworkType(NetworkType.CONNECTED)
-                                                .build()
-                                        )
-                                        .build()
-                                )
-                        }
-                    ) {
-                        Icon(Icons.Default.Refresh, contentDescription = null)
-                    }
-                }*/
+                scrollBehavior = scrollBehavior
             )
         }
     ) { p ->
@@ -86,7 +65,6 @@ fun ReleaseNoteScreen(vm: ReleaseNotesViewModel = viewModel()) {
                 verticalArrangement = Arrangement.spacedBy(4.dp),
                 modifier = Modifier.fillMaxSize()
             ) {
-
                 vm.notes.fastForEach {
                     stickyHeader {
                         SmallTopAppBar(

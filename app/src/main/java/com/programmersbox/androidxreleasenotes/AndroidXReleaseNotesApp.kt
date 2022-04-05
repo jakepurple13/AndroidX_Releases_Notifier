@@ -13,7 +13,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
 import org.jsoup.Jsoup
-import java.util.*
 import java.util.concurrent.TimeUnit
 
 class AndroidXReleaseNotesApp : Application() {
